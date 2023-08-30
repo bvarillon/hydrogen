@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/benoit/Dev/Hydrogen/build/linux-debug",
+  "command": "/usr/bin/c++   -g -std=gnu++14 -o CMakeFiles/hydro.dir/src/main.cpp.o -c /home/benoit/Dev/Hydrogen/src/main.cpp",
+  "file": "/home/benoit/Dev/Hydrogen/src/main.cpp"
+}
+]
