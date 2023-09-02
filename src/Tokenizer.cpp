@@ -1,3 +1,4 @@
+#include <cstdlib>
 #include <iostream>
 #include <ostream>
 
@@ -20,7 +21,7 @@ std::vector<Token> Tokenizer::tokenize(const std::string str)
                 tokens.push_back({ .type = TokenType::exit });
                 buffer.clear();
             } else {
-                std::cerr << "Unknown token !" << std::endl;
+                std::cerr << "Unknown keyword !" << std::endl;
                 exit(EXIT_FAILURE);
             }
         } else if (std::isspace(*c)) {
@@ -42,6 +43,9 @@ std::vector<Token> Tokenizer::tokenize(const std::string str)
         } else if (*c == ';') {
             tokens.push_back({ .type = TokenType::semi });
             c++;
+        }else {
+            std::cerr << "Unknown symbol" << std::endl;
+            exit(EXIT_FAILURE);
         }
     }
     return tokens;
